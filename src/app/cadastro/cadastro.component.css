@@ -1,0 +1,16 @@
+
+.titulo{
+  font-family: 'Heebo', sans-serif;
+  font-size: 45px;
+  font-weight: 600;
+}
+
+.container-cadastro{
+  width: 30%;
+  min-width: 490px;
+}
+
+
+.botao-salvar{
+  margin-top: 23px;
+}

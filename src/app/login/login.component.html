@@ -1,1 +1,19 @@
-<p>login works!</p>
+<div class="container-geral">
+  <div class="display-flex-center">
+    <h1 class="titulo">Blog</h1>
+    <h1 class="titulo-life">life</h1>
+  </div>
+
+  <div class="display-flex-column-center container-autenticacao">
+    <div class="container-login display-flex-column-center">
+      <app-entradas-valores [style.width.%]="100" [style.maxWidth.px]="427" type="text" [titulo]="'Email:'" (dadosDoFormulario)="receberEmail($event)" [valorDefault]="usuarioLogin.email"></app-entradas-valores>
+      <app-entradas-valores [style.width.%]="100" [style.maxWidth.px]="427" type="password" [titulo]="'Senha:'" (dadosDoFormulario)="receberSenha($event)" [valorDefault]="usuarioLogin.senha"></app-entradas-valores>
+    </div>
+    <div class="botao-login">
+      <app-botao type="submit" texto="Logar" background="var(--second-color)" color="var(--primary-color)" (click)="logar()"></app-botao>
+    </div>
+    <div class="container-cadastro">
+      <span class="cadastro" (click)="irParaTelaCadastro()">Cadastro</span>
+    </div>
+  </div>
+</div>

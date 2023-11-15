@@ -1,0 +1,13 @@
+<button mat-button
+  [ngClass]="circular ? 'circular' : 'normal'"
+  [style.background]="background"
+  [style.color]="color"
+  [style.borderRadius]="borderRadius?? ''"
+  [type]="type"
+  (click)="type ? '' : click.emit()"
+  [style.width]="width ?? ''"
+  [matTooltip]="legenda"
+>
+<span *ngIf="texto">{{texto}}</span>
+<mat-icon  *ngIf="iconeCentral">{{iconeCentral}}</mat-icon>
+</button>

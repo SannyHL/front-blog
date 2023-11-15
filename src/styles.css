@@ -1,1 +1,95 @@
-/* You can add global styles to this file, and also import other style files */
+
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+@import url('https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@100&display=swap');
+
+*{
+  --primary-color: #FFF;
+  --second-color: #6d246ace;
+  --third-color: #f18943;
+  --fourth-color: #473434;
+  --color-black: black;
+  --size-font-titulo: 32px;
+  --size-font-sub-titulo: 16px;
+  --border-radius: 6px;
+  --border-radius-formulario: 26px;
+
+}
+
+h1, span{
+  font-family: sans-serif;
+  font-weight: 600;
+}
+
+html, body{
+  height: 100%;
+  width: 100%;
+  margin: 0px;
+}
+
+html{
+  --mdc-outlined-text-field-focus-outline-color: var(--second-color) !important;
+  --mdc-outlined-textarea-focus-outline-color: var(--second-color) !important;
+}
+
+.display-flex-column-center{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.display-flex-content-center{
+  display: flex;
+  justify-content: center;
+}
+
+.display-flex-center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.elipse-text{
+  width: 95%;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.texto{
+  hyphens: auto;
+  word-wrap: break-word;
+}
+
+.mat-expansion-panel-header-description {
+  flex-grow: 1.5 !important;
+  color: var(--fourth-color) !important;
+}
+
+.data-hora{
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.mat-expansion-panel {
+  box-shadow: 0px 5px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px var(--second-color) !important;
+}
+
+.mdc-text-field--outlined:not(.mdc-text-field--disabled) .mdc-text-field__input {
+  color: var(--color-black) !important;
+}
+
+.mat-mdc-form-field-input-control.mat-mdc-form-field-input-control {
+  -moz-osx-font-smoothing:  none !important;
+  -webkit-font-smoothing:  none !important;
+  font-family: unset;
+  font: none !important;
+  letter-spacing: none !important;
+  text-decoration: none !important;
+  text-transform:  none !important;
+  border: none;
+  font-size: 14px !important;
+}
+

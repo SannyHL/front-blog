@@ -1,0 +1,14 @@
+.geral-app{
+  width: 97%;
+  height: 94%;
+  padding: 2% 1.5%;
+
+}
+
+@media screen and (max-width: 800px){
+  .geral-app{
+    width: 97%;
+    height: 92%;
+    padding: 5% 1.5%;
+  }
+}

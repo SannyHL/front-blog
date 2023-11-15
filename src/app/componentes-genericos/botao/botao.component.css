@@ -1,0 +1,27 @@
+
+.normal{
+  width: 200px !important;
+  height: 40px;
+  min-width: 10px;
+}
+
+.circular{
+  width: 40px !important;
+  height: 40px;
+  min-width: 10px;
+}
+
+.mat-mdc-button>.mat-icon {
+  margin: 0px;
+}
+
+@media screen and (max-width: 800px){
+  .normal{
+    width: 157px !important;
+    height: 40px;
+  }
+  .circular{
+    width: 40px !important;
+    height: 40px;
+  }
+}
