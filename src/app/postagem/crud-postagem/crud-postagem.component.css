@@ -1,0 +1,43 @@
+.container-postagem{
+  width: 30%;
+  min-width: 490px;
+  border: 1px dashed var(--second-color);
+  border-radius: 11px;
+  height: 45vh;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.botao{
+  margin-top: 23px;
+}
+
+input[type="file"] {
+  display: none;
+}
+
+.imagem{
+  height: 132px;
+  border-radius: 11px;
+}
+
+.delete-imagem{
+  position: absolute;
+  color: red;
+  border: 1px solid red;
+  background: white;
+  border-radius: 17px;
+  cursor: pointer;
+}
+
+
+.titulo{
+  font-family: 'Heebo', sans-serif;
+  font-size: 45px;
+  font-weight: 600;
+}
+.titulo-life{
+  font-family: 'Pacifico', cursive;
+  font-size: 45px;
+  color: var(--second-color);
+}

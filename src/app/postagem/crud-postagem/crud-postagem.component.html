@@ -1,0 +1,27 @@
+<div class="container-geral">
+  <div class="display-flex-center">
+    <h1 class="titulo">Blog</h1>
+    <h1 class="titulo-life">life</h1>
+  </div>
+
+  <div class="display-flex-column-center">
+    <div class="container-postagem display-flex-column-center">
+      <app-entradas-valores [style.width.%]="100" [style.maxWidth.px]="427" tipo="text-area" (dadosDoFormulario)="receberTexto($event)" [valorDefault]="postagem.texto" [maxlength]="500"></app-entradas-valores>
+      <div class="display-flex-center">
+        <div *ngIf="imagemForm.get('imagem')?.value">
+          <mat-icon class="delete-imagem" (click)="deletarImagem()">close</mat-icon>
+          <img [src]="imagemForm.get('imagem')?.value" class="imagem">
+        </div>
+        <form [formGroup]="imagemForm" (ngSubmit)="enviar()">
+          <label for="fileInput" style="cursor: pointer;">
+            <mat-icon >add_a_photo</mat-icon>
+            <input id="fileInput" type="file" (change)="receberImagem($event)" accept="image/*" formControlName="imagem" >
+          </label>
+        </form>
+      </div>
+    </div>
+    <div class="botao">
+      <app-botao type="submit" texto="enviar" background="var(--second-color)" color="var(--primary-color)" (click)="enviar()"></app-botao>
+    </div>
+  </div>
+</div>

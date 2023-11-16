@@ -20,7 +20,7 @@
 
 .text-area span{
     position: relative;
-    top: -28px;
+    top: -2px;
     display: flex;
     justify-content: flex-end;
 }
@@ -30,12 +30,28 @@
   overflow: auto;
   width: 100%;
   margin-top: 5px;
-  border-color: #0000005c;
-  border-radius: 4px;
-  font-family: 'Heebo', sans-serif;
-  font-size: 14px;
+  border: none;
+  font-family: sans-serif;
+  font-size: 19px;
 }
 
+.text-area textarea:focus{
+  outline: 0 !important;
+  border: none !important;
+}
+
+textarea::-webkit-scrollbar {
+  width: 6px;
+}
+
+textarea::-webkit-scrollbar-thumb {
+  background-color: var(--second-color);
+  border-radius: 6px;
+}
+
+textarea::-webkit-scrollbar-track {
+  background-color: var(--primary-color);
+}
 
 @media screen and (max-width: 800px){
   .container-geral{

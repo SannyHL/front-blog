@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { HttpClientModule } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import {MatButtonModule} from '@angular/material/button';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
@@ -25,6 +25,10 @@ import { CadastroComponent } from './cadastro/cadastro.component';
 import { EntradasValoresComponent } from './componentes-genericos/entradas-valores/entradas-valores.component';
 import { BotaoComponent } from './componentes-genericos/botao/botao.component';
 import { FeedComponent } from './feed/feed.component';
+import { PostagemComponent } from './postagem/postagem.component';
+import { CrudPostagemComponent } from './postagem/crud-postagem/crud-postagem.component';
+import { JwtInterceptor } from './config/jwt.interceptor';
+import { JwtHelperService, JwtModule } from '@auth0/angular-jwt';
 
 
 const MY_DATE_FORMAT = {
@@ -46,6 +50,8 @@ const MY_DATE_FORMAT = {
     EntradasValoresComponent,
     BotaoComponent,
     FeedComponent,
+    PostagemComponent,
+    CrudPostagemComponent,
   ],
   imports: [
     BrowserModule,
@@ -64,10 +70,21 @@ const MY_DATE_FORMAT = {
     MatDividerModule,
     MatTreeModule,
     MatExpansionModule,
-    MatTooltipModule
+    MatTooltipModule,
+    JwtModule.forRoot({
+      config: {
+        tokenGetter: () => localStorage.getItem('token'),
+      },
+    }),
   ],
   providers: [
     MatDatepickerModule,
+    JwtHelperService,
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: JwtInterceptor,
+      multi: true
+    },
     { provide: DateAdapter, useClass: MomentDateAdapter, deps: [MAT_DATE_LOCALE] },
     { provide: MAT_DATE_FORMATS, useValue: MY_DATE_FORMAT }
   ],

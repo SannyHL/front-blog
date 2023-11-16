@@ -43,7 +43,7 @@ export class  EntradasValoresComponent implements OnChanges, OnInit {
   }
 
   contadorLetras(){
-    this.tamanhoDescricao = this.form.value.length
+    this.tamanhoDescricao = this.form.value?.length
   }
 
   verificarTipo(){

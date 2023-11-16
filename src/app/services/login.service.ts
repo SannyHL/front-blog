@@ -32,6 +32,7 @@ export class LoginService {
   decodificarToken(){
     const token = this.autenticacaoService.retornarToken();
     const usuario = jwtDecode(token) as UsuarioModel
+
     this.usuario.next(usuario)
   }
 
@@ -41,6 +42,7 @@ export class LoginService {
 
   salvarToken(token: string){
     this.autenticacaoService.salvarToken(token)
+    console.log(jwtDecode(token))
     if(token){
       this.decodificarToken();
     }

@@ -40,7 +40,7 @@ export class LoginComponent implements OnInit, OnChanges {
       next: res =>{
         if(res){
           this.autenticacaoService.salvarToken(res.token);
-          this.router.navigate(['']);
+          this.router.navigate(['postagem']);
         } else{
           this.autenticacaoService.deletarToken();
         }
