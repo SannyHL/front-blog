@@ -4,6 +4,7 @@
   border: 1px dashed var(--second-color);
   border-radius: 11px;
   height: 45vh;
+  min-height: 436px;
   display: flex;
   justify-content: flex-start;
 }

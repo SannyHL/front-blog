@@ -1,0 +1,90 @@
+
+.titulo{
+  font-family: 'Heebo', sans-serif;
+  font-size: 45px;
+  font-weight: 600;
+}
+
+.titulo-life{
+  font-family: 'Pacifico', cursive;
+  font-size: 45px;
+  color: var(--second-color);
+}
+
+.container-postagem{
+  width: 30%;
+  min-width: 490px;
+  border: 1px dashed var(--second-color);
+  border-radius: 11px;
+  height: auto;
+  min-height: 89px;
+  display: flex;
+  margin-bottom: 10px;
+  padding: 5px;
+  flex-direction: row-reverse;
+  gap: 12px;
+}
+
+.container-postagem-sem-imagem{
+  width: 30%;
+  min-width: 490px;
+  border: 1px dashed var(--second-color);
+  border-radius: 11px;
+  height: auto;
+  min-height: 89px;
+  display: flex;
+  margin-bottom: 10px;
+  padding: 5px;
+}
+
+.imagem{
+  height: 132px;
+  border-radius: 11px;
+}
+
+.texto-post{
+  flex: 0 0 74%;
+}
+.imagem-post{
+  flex: 0 0 12%;
+}
+
+.cards{
+  cursor: pointer;
+}
+
+.container-comentarios{
+  width: 30%;
+  margin-top: 20px;
+}
+.comentarios{
+  height: auto;
+  max-height: 100px;
+  overflow: auto;
+}
+
+.comentarios-titulo{
+  font-family: 'Pacifico', cursive;
+  font-size: 21px;
+  text-decoration: underline;
+  color: var(--second-color);
+}
+
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+
+
+.delete-post{
+  position: relative;
+  left: 276px;
+  top: 14px;
+  color: red;
+  border: 1px solid red;
+  background: white;
+  border-radius: 17px;
+  cursor: pointer;
+}
+

@@ -1,1 +1,48 @@
-<p>postagem works!</p>
+<div class="container-geral">
+  <div class="display-flex-center" [style.marginBottom.px]="20">
+    <h1 class="titulo">Blog</h1>
+    <h1 class="titulo-life">life</h1>
+  </div>
+  <div class="botao-central">
+    <app-botao type="submit" texto="Novo Post" [width]="'129px'" [style.marginTop.px]="19" background="var(--second-color)" color="var(--primary-color)" (click)="abrirNovoPost()"></app-botao>
+  </div>
+  <div  *ngIf="!postSecionado.id" >
+    <div class="display-flex-column-center" *ngFor="let postagem of postagens" >
+      <div [ngClass]="postagem.imagem ? 'container-postagem display-flex-column-center  cards' : 'container-postagem-sem-imagem display-flex-column-center  cards'" (click)="abrirPost(postagem)">
+        <div [ngClass]="postagem.imagem ? 'texto-post' : ''" >
+          <span>{{postagem.texto}}</span>
+        </div>
+        <div class="display-flex-center imagem-post"  *ngIf="postagem.imagem" >
+            <img [src]="postagem.imagem" class="imagem">
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="display-flex-column-center" *ngIf="postSecionado.id" >
+    <mat-icon *ngIf="idUsuarioLogado === postSecionado.usuarioId" class="delete-post" (click)="deletarPost()" matTooltip="Deletar post">delete-forever</mat-icon>
+    <div [ngClass]="postSecionado.imagem ? 'container-postagem display-flex-column-center  cards' : 'container-postagem-sem-imagem display-flex-column-center  cards'">
+      <div [ngClass]="postSecionado.imagem ? 'texto-post' : ''" >
+        <span>{{postSecionado.texto}}</span>
+      </div>
+      <div class="display-flex-center imagem-post"  *ngIf="postSecionado.imagem" >
+          <img [src]="postSecionado.imagem" class="imagem">
+      </div>
+    </div>
+
+    <div class="container-comentarios">
+      <span *ngIf="comentarios" class="comentarios-titulo">Comentários...</span>
+      <div class="comentarios">
+        <div *ngFor="let comentario of comentarios">
+          <span>{{comentario.texto}}</span>
+        </div>
+      </div>
+    </div>
+
+    <div  class="display-flex-column-center" [style.width.%]="100" >
+      <app-entradas-valores placeholder="Comentário..." [style.width.%]="100"  [style.maxWidth.px]="562" type="text" (dadosDoFormulario)="receberComentario($event)" [valorDefault]="comentario.texto"></app-entradas-valores>
+      <app-botao type="submit" texto="Comentar" [width]="'129px'" [style.marginTop.px]="19" background="var(--second-color)" color="var(--primary-color)" (click)="comentar()"></app-botao>
+    </div>
+  </div>
+</div>

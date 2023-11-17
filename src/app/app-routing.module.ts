@@ -12,6 +12,7 @@ const routes: Routes = [
   { path: '', component: LoginComponent },
   { path: 'cadastro', component: CadastroComponent},
   { path: 'postagem', component: CrudPostagemComponent , canActivate: [GuardianService] },
+  { path: 'feed', component: PostagemComponent , canActivate: [GuardianService] },
 ];
 
 @NgModule({

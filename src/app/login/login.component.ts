@@ -39,10 +39,14 @@ export class LoginComponent implements OnInit, OnChanges {
     this.loginService.logar(this.usuarioLogin).subscribe({
       next: res =>{
         if(res){
-          this.autenticacaoService.salvarToken(res.token);
-          this.router.navigate(['postagem']);
+          this.loginService.salvarToken(res.token);
+          this.router.navigate(['feed']);
         } else{
           this.autenticacaoService.deletarToken();
+        }
+      }, error: error=> {
+        if(error.status == 403){
+          alert("Email ou senha icorretos.")
         }
       }
     })

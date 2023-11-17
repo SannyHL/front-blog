@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { PostagemModel } from '../models/postagem.model';
 import { Observable } from 'rxjs';
@@ -28,12 +28,21 @@ export class PostagemService {
   }
 
 
-  deletar(idPostagem: number): Observable<number>{
-    return this.http.delete<number>(this.url + `postagens/${idPostagem}`)
+  deletar(idPostagem: number): Observable<any>{
+    return this.http.get(this.url + `postagens/deletar/${idPostagem}`)
   }
 
 
   atualizar(postagem: PostagemModel): Observable<number>{
     return this.http.put<number>(this.url + `postagens`, postagem)
   }
+
+  obterImagem(nomeDaImagem: string): Observable<HttpResponse<Blob>> {
+    const url = this.url + `postagens/imagens/` + nomeDaImagem;
+    return this.http.get(url, {
+      observe: 'response',
+      responseType: 'blob'
+    });
+  }
+
 }

@@ -42,7 +42,6 @@ export class CadastroComponent implements OnInit {
     if(this.usuario.email && this.usuario.nome && this.usuario.senha){
       this.usuarioService.salvar(this.usuario).subscribe({
         next: res =>{
-          console.log(res)
         }, complete: ()=> this.router.navigate(['login'])
       })
     } else {

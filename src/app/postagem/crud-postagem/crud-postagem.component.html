@@ -3,7 +3,9 @@
     <h1 class="titulo">Blog</h1>
     <h1 class="titulo-life">life</h1>
   </div>
-
+  <div >
+    <app-botao type="submit" texto="Voltar" [width]="'129px'" [style.marginTop.px]="19" background="var(--second-color)" color="var(--primary-color)" (click)="voltarFeed()"></app-botao>
+  </div>
   <div class="display-flex-column-center">
     <div class="container-postagem display-flex-column-center">
       <app-entradas-valores [style.width.%]="100" [style.maxWidth.px]="427" tipo="text-area" (dadosDoFormulario)="receberTexto($event)" [valorDefault]="postagem.texto" [maxlength]="500"></app-entradas-valores>

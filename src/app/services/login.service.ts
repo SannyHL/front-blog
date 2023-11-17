@@ -6,6 +6,7 @@ import { BehaviorSubject, Observable } from 'rxjs';
 import { AutenticacaoService } from './autenticacao.service';
 import { UsuarioModel } from '../models/usuario.model';
 import { jwtDecode } from 'jwt-decode';
+import { JwtHelperService } from '@auth0/angular-jwt';
 
 @Injectable({
   providedIn: 'root'
@@ -18,7 +19,8 @@ export class LoginService {
 
   constructor(
     private http: HttpClient,
-    private autenticacaoService: AutenticacaoService
+    private autenticacaoService: AutenticacaoService,
+    private jwtHelper: JwtHelperService
   ) {
     if(this.autenticacaoService.verificarToken()){
       this.decodificarToken()
@@ -32,8 +34,8 @@ export class LoginService {
   decodificarToken(){
     const token = this.autenticacaoService.retornarToken();
     const usuario = jwtDecode(token) as UsuarioModel
-
     this.usuario.next(usuario)
+    return usuario
   }
 
   retornarUser(){
@@ -42,7 +44,6 @@ export class LoginService {
 
   salvarToken(token: string){
     this.autenticacaoService.salvarToken(token)
-    console.log(jwtDecode(token))
     if(token){
       this.decodificarToken();
     }

@@ -29,9 +29,7 @@ export class CrudPostagemComponent implements OnInit {
 
 
   ngOnInit(): void {
-
     this.idUsuarioLogado = localStorage.getItem("username")
-    console.log(this.idUsuarioLogado)
   }
 
   receberTitulo(titulo:any){
@@ -52,22 +50,15 @@ export class CrudPostagemComponent implements OnInit {
     if (event.target?.files && event.target?.files?.length) {
       const [file] = event.target.files;
 
-      const tamanhoMaximoEmBytes = 205 * 1024;
 
-      if (file.size > tamanhoMaximoEmBytes) {
-        alert('A imagem excede o tamanho máximo permitido.');
-        this.imaemSelecionada  = undefined
-        this.deletarImagem()
-        return;
-      } else{
-        reader.readAsDataURL(file);
+      reader.readAsDataURL(file);
 
-        reader.onload = () => {
-          this.imagemForm.patchValue({
-            imagem: reader.result
-          });
-        };
-      }
+      reader.onload = () => {
+        this.imagemForm.patchValue({
+          imagem: reader.result
+        });
+      };
+
 
     }
 
@@ -80,13 +71,20 @@ export class CrudPostagemComponent implements OnInit {
   }
 
   enviar(){
-    this.postagem.imagem = this.imagemForm.get('imagem')?.value;
-    this.postagem.usuarioId  = 1
-    this.postagemService.salvar(this.postagem).subscribe({
-      next: res =>{
-        console.log(res)
-      }
-    })
+    if(!this.postagem.texto){
+      alert("Gentileza preencher post.")
+    } else{
+      this.postagem.imagem = this.imagemForm.get('imagem')?.value;
+      this.postagemService.salvar(this.postagem).subscribe({
+        next: res =>{
+          this.router.navigate(['feed']);
+        }
+      })
+    }
+  }
+
+  voltarFeed(){
+    this.router.navigate(['feed']);
   }
 
 }

@@ -10,7 +10,6 @@ export class AutenticacaoService {
   constructor() { }
 
   salvarToken(token:string){
-    console.log(token)
     return localStorage.setItem(CHAVE, token)
   }
 

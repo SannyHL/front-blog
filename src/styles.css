@@ -93,3 +93,22 @@ html{
   font-size: 14px !important;
 }
 
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--second-color);
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--primary-color);
+}
+
+
+.botao-central{
+  text-align: center;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
