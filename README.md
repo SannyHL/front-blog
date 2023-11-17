@@ -1,27 +1,78 @@
-# FrontBlog
+<h1 align="center">💻 Front Blog</h1>
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.0.
+- <b>Desenvolvida para incorporação na api: <https://github.com/SannyHL/api-blog.git></b> 
 
-## Development server
+<br><h1 align="center">🎁 Alguns recursos disponíveis</h1>
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- [x] Autenticação por Token JWT
+- [x] Criação de postagens
+- [X] Listagem de postagens
+- [X] Exclusão lógica de postagens
+- [X] Buscar de todas as postagens ativas
+- [x] Postagem de imagem.
+- [x] Salvamento da imagem em pasta no sistema.
+- [X] Criação e listagem de comentarios.
+- [X] dentre outros...
 
-## Code scaffolding
+<br><h2>🛠 Algumas das tecnologias utilizadas na construção do projeto:</h2>
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- <b>Angular 16</b> 
+- <b>Angular Material</b>
 
-## Build
+<br><h1 align="center">Utilização 📗</h1><br>
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+  <br><h2>🔧 Utilização do código:</h2>
 
-## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+<h4>📋 Pré-requisitos</h4>
 
-## Running end-to-end tests
+- ➡Ter instalado o Node.
+- ➡Um editor para trabalhar com o código, eu utilizei o VS Code.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
 
-## Further help
+<br><h2>🎲 Rodando a API na localmente:</h2>
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+```bash
+
+➩ Clone este repositório
+$ git clone <https://github.com/SannyHL/front-blog.git>
+
+➩ Acesse o código com o editor de sua preferência
+
+➩ Instale as dependências executando no terminal o npm i --legacy-peer-deps
+
+➩ Rode a aplicação com o comando ng s
+
+➩ O servidor iniciará na porta:4200 por default - acesse <http://localhost:4200>
+
+➩ A pasta para guardar as imagens do post são criadas automaticamente dentro da pasta do usuário do sistema.
+
+➩ Baixar o projeto do back-end que está no <https://github.com/SannyHL/api-blog.git>
+
+```
+
+<br><h2>❤️ Imagens Sistema</h2>
+
+![image](https://github.com/SannyHL/api-blog/assets/104280692/dc803239-727c-44b3-b3f2-e693bf5078d7)
+![image](https://github.com/SannyHL/api-blog/assets/104280692/cd81937e-8fa0-41a0-bbea-b32d3dd6b1d1)
+![image](https://github.com/SannyHL/api-blog/assets/104280692/617c7714-8426-4b8e-b85c-68557e22bbd5)
+![image](https://github.com/SannyHL/api-blog/assets/104280692/7319386a-c81b-43b3-8a69-46bb900c6961)
+![image](https://github.com/SannyHL/api-blog/assets/104280692/84c1039b-eb44-4c8c-beb8-d9716dd9c07d)
+![image](https://github.com/SannyHL/api-blog/assets/104280692/335b13e2-48a0-41a5-be75-fdc67a2f3133)
+![image](https://github.com/SannyHL/api-blog/assets/104280692/f920945e-b836-4348-b27e-788a4f46d2d9)
+![image](https://github.com/SannyHL/api-blog/assets/104280692/68026564-7b24-48d1-ad54-343665d560ff)
+![image](https://github.com/SannyHL/api-blog/assets/104280692/bb2b0b03-1e44-4871-b048-2746b0f5e429)
+![image](https://github.com/SannyHL/api-blog/assets/104280692/109d40f7-af27-47a2-876a-780f6fbec8bf)
+
+### Autora
+---
+
+<img src="https://user-images.githubusercontent.com/104280692/194205159-83b3bca2-3f59-40cd-b909-9bb0b8e40825.png" width="250px;" alt=""/>
+Criado com ❤️ por Sanny Helen Lima <br>
+⭐ Entre em contato!
+<br>
+
+
+[![Linkedin Badge](https://img.shields.io/badge/-SannyHL-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/sannyhelenlima/)](https://www.linkedin.com/in/sannyhelenlima) 
+[![Gmail Badge](https://img.shields.io/badge/-sannyhelenlima@gmail.com-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:sannyhelenlima@gmail.com)](mailto:sannyhelenlima@gmail.com)
+
