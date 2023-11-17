@@ -43,7 +43,7 @@ $ git clone <https://github.com/SannyHL/front-blog.git>
 
 ➩ Rode a aplicação com o comando ng s
 
-➩ O servidor iniciará na porta:4200 por default - acesse <http://localhost:4200>
+➩ O servidor iniciará na porta:4200 por default - acesse <http://localhost:4200/login> para ir para o login, e caso não tenha cadastro, clique na opção de cadastro.
 
 ➩ A pasta para guardar as imagens do post são criadas automaticamente dentro da pasta do usuário do sistema.
 
